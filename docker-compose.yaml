@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  app:
+    build: .
+    entrypoint: sh -c "npm install && npm run dev"
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app
